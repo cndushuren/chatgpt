@@ -88,7 +88,8 @@ export function Settings(props: { closeSettings: () => void }) {
 
   const updateStore = useUpdateStore();
   const [checkingUpdate, setCheckingUpdate] = useState(false);
-  const currentVersion = updateStore.version;
+  // const currentVersion = updateStore.version;
+  const currentVersion = updateStore.remoteVersion;
   const remoteId = updateStore.remoteVersion;
   const hasNewVersion = currentVersion !== remoteId;
 
