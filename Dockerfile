@@ -25,6 +25,9 @@ COPY . .
 RUN yarn build
 
 FROM base AS runner
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 WORKDIR /app
 
 RUN apk add proxychains-ng
