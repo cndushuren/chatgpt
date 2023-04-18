@@ -3,7 +3,7 @@
 
 [私人ChatGPT，点我进入](https://dushuren.top/)
  
-![主界面](./docs/images/cover.png)
+![主界面](./docs/images/cover.jpg)
 </div>
 
 ## 主要功能
@@ -18,6 +18,9 @@
 2. 没有自己的key可以联系作者获取访问秘钥；
 
 ## 联系我获取访问秘钥
-<div align="center">
-<img src="./docs/images/QQ.jpg" style="width: 50%;" alt="预览"/>
-</div>
+![QQ](https://cn-img.owoser.cn/images/2023/04/18/925951467834d333f5255fad1a630625.png)
+
+## 打赏
+![微信](https://cn-img.owoser.cn/images/2023/04/18/d7e886c7f978f7af710ffab0f28e013f.md.jpg)
+
+![支付宝](https://cn-img.owoser.cn/images/2023/04/18/f1cd0de91a3340246f4e0afe6de52b6d.md.jpg)
