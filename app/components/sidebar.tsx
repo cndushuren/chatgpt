@@ -5,6 +5,7 @@ import styles from "./home.module.scss";
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
 import GithubIcon from "../icons/github.svg";
+import DonationIcon from "../icons/donation.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
@@ -86,9 +87,9 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>ChatGPT Next</div>
+        <div className={styles["sidebar-title"]}>读书人</div>
         <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+          含章丽色锦，囊萤映雪霜。
         </div>
         <div className={styles["sidebar-logo"]}>
           <ChatGptIcon />
@@ -120,8 +121,11 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank">
-              <IconButton icon={<GithubIcon />} shadow />
+            <a
+              href="https://cn-img.owoser.cn/images/2023/04/18/d7e886c7f978f7af710ffab0f28e013f.md.jpg"
+              target="_blank"
+            >
+              <IconButton icon={<DonationIcon />} shadow />
             </a>
           </div>
         </div>
