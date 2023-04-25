@@ -126,7 +126,7 @@ export function SideBar(props: { className?: string }) {
           </div>
           <div className={styles["sidebar-action"]}>
             <a
-              href="https://cn-img.owoser.cn/images/2023/04/18/d7e886c7f978f7af710ffab0f28e013f.md.jpg"
+              href="https://gitee.com/liz_cn/images-store/raw/main/weixin.jpg"
               target="_blank"
             >
               <IconButton icon={<DonationIcon />} shadow />
