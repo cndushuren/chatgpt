@@ -6,6 +6,7 @@ import { requestUsage } from "../requests";
 export interface UpdateStore {
   lastUpdate: number;
   remoteVersion: string;
+  remoteTag: string;
 
   used?: number;
   subscription?: number;
@@ -37,6 +38,7 @@ export const useUpdateStore = create<UpdateStore>()(
     (set, get) => ({
       lastUpdate: 0,
       remoteVersion: "",
+      remoteTag: "",
 
       lastUpdateUsage: 0,
 
@@ -55,9 +57,12 @@ export const useUpdateStore = create<UpdateStore>()(
         try {
           const data = await (await fetch(FETCH_COMMIT_URL)).json();
           const remoteCommitTime = data[0].commit.committer.date;
+          const tagData = await (await fetch(FETCH_TAG_URL)).json();
+          const remoteTag = tagData[0].name;
           const remoteId = new Date(remoteCommitTime).getTime().toString();
           set(() => ({
             remoteVersion: remoteId,
+            remoteTag: remoteTag,
           }));
           console.log("[Got Upstream] ", remoteId);
         } catch (error) {
