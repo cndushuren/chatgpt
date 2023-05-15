@@ -216,10 +216,8 @@ export function Settings() {
   const updateStore = useUpdateStore();
   const [checkingUpdate, setCheckingUpdate] = useState(false);
   // const currentVersion = formatVersionDate(updateStore.version);
-  const currentVersion =
-    updateStore.remoteTag + "_" + formatVersionDate(updateStore.remoteVersion);
-  const remoteId =
-    updateStore.remoteTag + "_" + formatVersionDate(updateStore.remoteVersion);
+  const currentVersion = updateStore.remoteTag;
+  const remoteId = updateStore.remoteTag;
   const hasNewVersion = currentVersion !== remoteId;
 
   function checkUpdate(force = false) {
@@ -576,9 +574,9 @@ export function Settings() {
         <List>
           <ModelConfigList
             modelConfig={config.modelConfig}
-            updateConfig={(upater) => {
+            updateConfig={(updater) => {
               const modelConfig = { ...config.modelConfig };
-              upater(modelConfig);
+              updater(modelConfig);
               config.update((config) => (config.modelConfig = modelConfig));
             }}
           />
